@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.maxawergy.rsocketserver.MainSocketControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-20T10:54:34" hostname="DESKTOP-0HOTR8V" time="1.37">
+  <properties/>
+  <testcase name="testGetCats()" classname="ru.maxawergy.rsocketserver.MainSocketControllerTest" time="1.134"/>
+  <testcase name="testDeleteCat()" classname="ru.maxawergy.rsocketserver.MainSocketControllerTest" time="0.158"/>
+  <testcase name="testAddCat()" classname="ru.maxawergy.rsocketserver.MainSocketControllerTest" time="0.045"/>
+  <testcase name="testGetCat()" classname="ru.maxawergy.rsocketserver.MainSocketControllerTest" time="0.022"/>
+  <system-out><![CDATA[13:54:29.197 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ru.maxawergy.rsocketserver.MainSocketControllerTest]: MainSocketControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:54:29.302 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ru.maxawergy.rsocketserver.RSocketServerApplication for test class ru.maxawergy.rsocketserver.MainSocketControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.3)
+
+2023-09-20T13:54:29.746+03:00  INFO 13700 --- [    Test worker] r.m.r.MainSocketControllerTest           : Starting MainSocketControllerTest using Java 19.0.2 with PID 13700 (started by 1499maxawergy in C:\Users\1499maxawergy\IdeaProjects\PR4_RSocket\RSocketServer)
+2023-09-20T13:54:29.748+03:00  INFO 13700 --- [    Test worker] r.m.r.MainSocketControllerTest           : No active profile set, falling back to 1 default profile: "default"
+2023-09-20T13:54:30.435+03:00  INFO 13700 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-20T13:54:30.595+03:00  INFO 13700 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 1 JPA repository interfaces.
+2023-09-20T13:54:31.205+03:00  INFO 13700 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-09-20T13:54:31.217+03:00  INFO 13700 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-20T13:54:31.217+03:00  INFO 13700 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-20T13:54:31.318+03:00  INFO 13700 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-20T13:54:31.319+03:00  INFO 13700 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1536 ms
+2023-09-20T13:54:31.565+03:00  INFO 13700 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-20T13:54:31.640+03:00  INFO 13700 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-20T13:54:31.644+03:00  INFO 13700 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-20T13:54:31.817+03:00  INFO 13700 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-20T13:54:31.983+03:00  INFO 13700 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-20T13:54:31.999+03:00  INFO 13700 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-20T13:54:32.167+03:00  INFO 13700 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2d0f548a
+2023-09-20T13:54:32.170+03:00  INFO 13700 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-20T13:54:32.467+03:00  INFO 13700 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-20T13:54:33.112+03:00  INFO 13700 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-20T13:54:33.152+03:00  INFO 13700 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20T13:54:34.148+03:00  INFO 13700 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51480 (http) with context path ''
+2023-09-20T13:54:34.279+03:00  INFO 13700 --- [    Test worker] o.s.b.rsocket.netty.NettyRSocketServer   : Netty RSocket started on port(s): 5200
+2023-09-20T13:54:34.287+03:00  INFO 13700 --- [    Test worker] r.m.r.MainSocketControllerTest           : Started MainSocketControllerTest in 4.819 seconds (process running for 6.147)
+Hibernate: select c1_0.id,c1_0.age,c1_0.breed,c1_0.color,c1_0.name from public.cat c1_0
+Hibernate: select nextval('public.cat_seq')
+Hibernate: insert into public.cat (age,breed,color,name,id) values (?,?,?,?,?)
+Hibernate: select c1_0.id,c1_0.age,c1_0.breed,c1_0.color,c1_0.name from public.cat c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_0.age,c1_0.breed,c1_0.color,c1_0.name from public.cat c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_0.age,c1_0.breed,c1_0.color,c1_0.name from public.cat c1_0 where c1_0.id=?
+Hibernate: delete from public.cat where id=?
+Hibernate: insert into public.cat (age,breed,color,name,id) values (?,?,?,?,?)
+Hibernate: insert into public.cat (age,breed,color,name,id) values (?,?,?,?,?)
+Hibernate: select c1_0.id,c1_0.age,c1_0.breed,c1_0.color,c1_0.name from public.cat c1_0 where c1_0.id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
