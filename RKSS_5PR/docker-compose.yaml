@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  app1:
+    image: maxawergy/rkss5pr
+
+  app2:
+    image: maxawergy/rkss5pr
+
+  app3:
+    image: maxawergy/rkss5pr
+
+  app4:
+    image: maxawergy/rkss5pr
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
