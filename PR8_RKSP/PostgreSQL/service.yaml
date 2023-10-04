@@ -1,0 +1,43 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: postgresql
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2023-10-04T18:02:53Z"
+  labels:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: postgresql
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: postgresql
+    app.kubernetes.io/version: 16.0.0
+    helm.sh/chart: postgresql-13.0.0
+  name: postgres
+  namespace: default
+  resourceVersion: "9129"
+  uid: 02970ad5-5e3a-4b2f-9cf9-46ac3c96655a
+spec:
+  clusterIP: 10.106.232.183
+  clusterIPs:
+    - 10.106.232.183
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    - name: tcp-postgresql
+      port: 5432
+      protocol: TCP
+      targetPort: tcp-postgresql
+  selector:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: postgresql
+    app.kubernetes.io/name: postgresql
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

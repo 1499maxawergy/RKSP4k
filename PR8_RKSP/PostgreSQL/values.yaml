@@ -1,0 +1,8 @@
+postgresqlUsername: postgres
+postgresqlPassword: postgres
+postgresqlDatabase: postgres
+replication:
+  enabled: true
+  replicationUser: postgres
+  replicationPassword: postgres
+  slaveReplicas: 3

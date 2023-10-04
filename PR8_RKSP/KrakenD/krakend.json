@@ -1,0 +1,181 @@
+{
+  "version": 3,
+  "extra_config": {
+  },
+  "endpoints": [
+    {
+      "endpoint": "/auth",
+      "method": "GET",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/info",
+          "host": ["http://auth.default:8900"],
+          "encoding": "string"
+        }
+      ]
+    },
+
+
+    {
+      "endpoint": "/cart",
+      "method": "GET",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/cart",
+          "host": ["http://cart.default:8081"],
+          "encoding": "string"
+        }
+      ]
+    },
+    {
+      "endpoint": "/cart",
+      "method": "POST",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/cart",
+          "host": ["http://cart.default:8081"],
+          "encoding": "string"
+        }
+      ]
+    },
+    {
+      "endpoint": "/cart/delete",
+      "method": "GET",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/cart/delete",
+          "host": ["http://cart.default:8081"],
+          "encoding": "string"
+        }
+      ]
+    },
+    {
+      "endpoint": "/cart/clear",
+      "method": "GET",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/cart/clear",
+          "host": ["http://cart.default:8081"],
+          "encoding": "string"
+        }
+      ]
+    },
+    {
+      "endpoint": "/cart/order",
+      "method": "GET",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/cart/order",
+          "host": ["http://cart.default:8081"],
+          "encoding": "string"
+        }
+      ]
+    },
+
+
+    {
+      "endpoint": "/discovery",
+      "method": "GET",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/",
+          "host": ["http://discovery.default:8700"],
+          "encoding": "string"
+        }
+      ]
+    },
+
+
+    {
+      "endpoint": "/catalog/items",
+      "method": "GET",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/catalog/items",
+          "host": ["http://catalog.default:8080"],
+          "encoding": "string"
+        }
+      ]
+    },
+    {
+      "endpoint": "/catalog/item/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/catalog/item/{id}",
+          "host": ["http://catalog.default:8080"],
+          "encoding": "string"
+        }
+      ]
+    },
+    {
+      "endpoint": "/catalog/item/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/catalog/item/{id}",
+          "host": ["http://catalog.default:8080"],
+          "encoding": "string"
+        }
+      ]
+    },
+    {
+      "endpoint": "/catalog/item/{id}",
+      "method": "PUT",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/catalog/item/{id}",
+          "host": ["http://catalog.default:8080"],
+          "encoding": "string"
+        }
+      ]
+    },
+    {
+      "endpoint": "/catalog/item",
+      "method": "POST",
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "input_headers": ["*"],
+      "backend": [
+        {
+          "url_pattern": "/catalog/item",
+          "host": ["http://catalog.default:8080"],
+          "encoding": "string"
+        }
+      ]
+    }
+  ]
+}

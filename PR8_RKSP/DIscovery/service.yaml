@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: discovery
+  name: discovery
+  namespace: default
+spec:
+  ports:
+    - port: 8700
+      protocol: TCP
+      targetPort: 8700
+  selector:
+    app: discovery
+  sessionAffinity: None
+  type: ClusterIP
