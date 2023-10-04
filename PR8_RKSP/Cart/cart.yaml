@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cart
+  name: cart
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cart
+  template:
+    metadata:
+      labels:
+        app: cart
+    spec:
+      containers:
+        - image: maxawergy/cart-service:latest
+          imagePullPolicy: Never
+          name: cart
+          resources:
+            limits:
+              cpu: "0.5"
+              memory: "500M"
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always

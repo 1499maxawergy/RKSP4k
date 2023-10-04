@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: auth
+  name: auth
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth
+  template:
+    metadata:
+      labels:
+        app: auth
+    spec:
+      containers:
+        - image: maxawergy/auth-service:latest
+          imagePullPolicy: Never
+          name: auth
+          resources:
+            limits:
+              cpu: "0.5"
+              memory: "500M"
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
